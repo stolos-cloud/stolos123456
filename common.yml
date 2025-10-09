@@ -1,0 +1,2 @@
+base_domain: stolos.cloud
+lb_ip: 192.168.2.25/24
