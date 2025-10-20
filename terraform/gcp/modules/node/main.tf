@@ -2,18 +2,17 @@
 # Uses official Talos GCP image and injects machine config via metadata
 
 data "google_compute_network" "vpc" {
-  name = "stolos-cluster-vpc"
+  name = "something-unique-vpc"
 }
 
 data "google_compute_subnetwork" "subnet" {
-  name   = "stolos-cluster-subnet"
+  name   = "something-unique-subnet"
   region = var.region
 }
 
-# Use official Talos GCP image
 data "google_compute_image" "talos" {
-  project = "talos-cloud"
-  family  = "talos-1-11"
+  project = "cedille-464122"
+  name    = "talos-1-11-1-amd64"
 }
 
 resource "google_compute_instance" "node" {
