@@ -6,7 +6,7 @@ terraform {
     }
   }
   backend "gcs" {
-    bucket = "stolos-tf-state-ofabtxq5"
+    bucket = "stolos-tf-state-tnv7yy2d"
     prefix = "infrastructure/state"
   }
 }
@@ -18,7 +18,7 @@ provider "google" {
 
 # VPC Network
 resource "google_compute_network" "main_vpc" {
-  name                    = "stolos-cluster-vpc"
+  name                    = "something-unique-vpc"
   auto_create_subnetworks = false
 }
 
@@ -26,7 +26,7 @@ resource "google_compute_network" "main_vpc" {
 # - On-prem pods: 10.244.0.0/16
 # - On-prem services: 10.96.0.0/12
 resource "google_compute_subnetwork" "main_subnet" {
-  name          = "stolos-cluster-subnet"
+  name          = "something-unique-subnet"
   ip_cidr_range = "172.16.0.0/20"
   region        = "us-central1"
   network       = google_compute_network.main_vpc.id
