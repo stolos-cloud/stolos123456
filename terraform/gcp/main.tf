@@ -6,7 +6,7 @@ terraform {
     }
   }
   backend "gcs" {
-    bucket = "stolos-tf-state-tnv7yy2d"
+    bucket = "something-unique-tf-state-5dqoybw0"
     prefix = "infrastructure/state"
   }
 }
