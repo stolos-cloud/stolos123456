@@ -12,7 +12,7 @@ data "google_compute_subnetwork" "subnet" {
 
 data "google_compute_image" "talos" {
   project = "cedille-464122"
-  name    = "talos-1-11-1-amd64"
+  name    = "something-unique-talos-1-11-1-amd64"
 }
 
 resource "google_compute_instance" "node" {
